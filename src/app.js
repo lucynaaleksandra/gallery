@@ -1,7 +1,7 @@
-export default class App {
-  static Var = "Hello"
+// export default class App {
+//   static Var = "Hello"
 
-  greet = (...greetings) => {
-    console.log("hello:", ...greetings)
-  }
-}
+//   greet = (...greetings) => {
+//     console.log("hello:", ...greetings)
+//   }
+// }

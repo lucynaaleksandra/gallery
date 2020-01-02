@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>App Starter</title>
-  </head>
 
-  <body>
-    <main><h1>Vanilla Javascript, HTML, SCSS</h1></main>
-  </body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0" />
+	<title>Gallery</title>
+</head>
+
+<body>
+
+	<div class="galleries">
+		<div class="gallery gallery1">
+			<img src="./asset/img-1.jpg"
+				alt="photo 1"
+				tabindex="0"
+				title="This is the title for img 1"
+				data-description="This is the desc">
+			<img src="./asset/img-2.jpg"
+				alt="photo 2"
+				tabindex="0"
+				title="This is the title for img 2"
+				data-description="This is the desc">
+			<img src="./asset/img-3.jpg"
+				alt="photo 3"
+				tabindex="0"
+				title="This is the title for img 3"
+				data-description="This is the desc">
+			<img src="./asset/img-4.jpg"
+				alt="photo 4"
+				tabindex="0"
+				title="This is the title for img 4"
+				data-description="This is the desc">
+		</div>
+
+		<div class="gallery gallery2">
+			<img src="./asset/img-7.jpg"
+				alt="photo 7"
+				tabindex="0"
+				title="This is the title for img 7"
+				data-description="This is the desc">
+			<img src="./asset/img-8.jpg"
+				alt="photo 8"
+				tabindex="0"
+				title="This is the title for img 8"
+				data-description="This is the desc">
+			<img src="./asset/img-9.jpg"
+				alt="photo 9"
+				tabindex="0"
+				title="This is the title for img 9"
+				data-description="This is the desc">
+			<img src="./asset/img-10.jpg"
+				alt="photo 10"
+				tabindex="0"
+				title="This is the title for img 10"
+				data-description="This is the desc">
+		</div>
+
+		<div class="modal">
+			<div class="modalInner">
+				<button aria-label="Previous Photo"
+					class="prev">&lt;</button>
+
+				<figure>
+					<img src="./asset/img-1.jpg" />
+					<figcaption>
+						<h2>Test Title</h2>
+						<p>Lorem ipsum…</p>
+					</figcaption>
+				</figure>
+
+				<button aria-label="Next Photo"
+					class="next">&gt;</button>
+			</div>
+		</div>
+	</div>
+
+</body>
+
 </html>

@@ -20,7 +20,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
+	color: #ffffff;
+	overflow-x: hidden;
 }
 
 h1 {
@@ -29,11 +30,11 @@ h1 {
 }
 
 h2 {
-  font-weight: 35px;
+  font-size: 35px;
 }
 
 h3 {
-  font-weight: 30px;
+  font-size: 30px;
 }
 
 h1,
@@ -49,4 +50,95 @@ h6 {
 a {
   text-decoration: none;
   color: #333;
+}
+
+
+.galleries {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 20px;
+	align-items: stretch;
+	background: white;
+	padding: 2rem;
+}
+
+.gallery img {
+	width: 100%;
+	object-fit: cover;
+	border:1px solid black;
+	outline: none;
+	cursor: pointer;
+}
+
+.modal {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	background: rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.modalInner {
+	height: calc(100vh - 100px);
+	margin: 3rem;
+	max-width: 1000px;
+	display: grid;
+	grid-template-columns: 50px 1fr 50px;
+	color: black;
+	background: white;
+	box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
+	border-radius: 4px;
+	transform: translateY(-100vh);
+	transition: all 0.5s;
+}
+
+.modal figure {
+	margin: 0;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
+
+.modal img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+.modal.open {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.modal figcaption {
+	padding: 10px;
+}
+
+.modal h2 {
+	color: black;
+}
+
+.modal.open .modalInner {
+	transform: translateY(0);
+}
+
+.next, 
+.prev {
+	font-size: 25px;
+	color: grey;
 }
